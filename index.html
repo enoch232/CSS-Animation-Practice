@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
-p {
+.pp {
   animation-duration: 3s;
   animation-name: slidein;
   animation-direction:alternate;
@@ -27,7 +28,23 @@ p {
 </style>
 </head>
 <body>
-	<p>Hello!</p>
+	<div class = "up" style = "background-color:green;width:100%;height:700px;">
+  </div>
+  <div class = "down" style = "background-color:yellow; width:100%; height:700px">
+
+  </div>
+  <script>
+  (function(){
+    $(document).on("scroll",function(){
+    if ($(document).scrollTop() > 350){
+      alert("hello!");
+
+    }
+  });
+
+  })();
+  
+  </script>
 
 </body>
 </html>
